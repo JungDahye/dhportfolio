@@ -14,82 +14,84 @@
     solo: "개인 작업",
   };
 
-  /* 포트폴리오 데이터 : {name, cat, img, url} */
+  /* 포트폴리오 데이터
+   * {name, cat, img, url, client(발주처/고객사), company(소속사), role(역할), cont(기여도 %)}
+   * cont 값은 임시로 0으로 두었습니다. 프로젝트별 실제 기여도(%)로 수정하세요. */
   var WORKS = [
     /* --- REACT --- */
-    { name: "이실장플러스", cat: "react", img: "71.png", url: "https://www.aipartner.plus/" },
+    { name: "이실장플러스", cat: "react", img: "71.png", url: "https://www.aipartner.plus/", client: "프롭티어㈜ (자사 서비스)", company: "프롭티어㈜", role: "UI/UX·프론트엔드 개발(React), 차트 구현(d3.js·chart.js)", cont: 30 },
 
     /* --- 웹접근성 --- */
-    { name: "가천대학교", cat: "a11y", img: "45.png", url: "https://www.gachon.ac.kr/kor/index.do" },
-    { name: "가천대학교 장애학생지원센터", cat: "a11y", img: "46.png", url: "https://www.gachon.ac.kr/sites/nanum/index.do" },
+    { name: "가천대학교", cat: "a11y", img: "45.png", url: "https://www.gachon.ac.kr/kor/index.do", client: "가천대학교", company: "케이투웹테크", role: "UI/UX 퍼블리싱·반응형·웹접근성 인증", cont: 100 },
+    { name: "가천대학교 장애학생지원센터", cat: "a11y", img: "46.png", url: "https://www.gachon.ac.kr/sites/nanum/index.do", client: "가천대학교", company: "케이투웹테크", role: "UI/UX 퍼블리싱·반응형·웹접근성 인증", cont: 100 },
     // { name: '강릉원주대학교', cat: 'a11y', img: '52.png', url: 'https://www.gwnu.ac.kr/sites/kr/index.do' },
-    { name: "수협 어촌사랑", cat: "a11y", img: "54.png", url: "https://isealove.suhyup.co.kr/isealove/index.do" },
-    { name: "수협 수산경제연구원", cat: "a11y", img: "55.png", url: "https://isealove.suhyup.co.kr/isealove/index.do" },
-    { name: "나사렛대학교", cat: "a11y", img: "53.png", url: "https://www.kornu.ac.kr/mbs/kornukr/index.jsp" },
+    { name: "수협 어촌사랑", cat: "a11y", img: "54.png", url: "https://isealove.suhyup.co.kr/isealove/index.do", client: "수협중앙회", company: "케이투웹테크", role: "웹접근성 인증", cont: 100 },
+    { name: "수협 수산경제연구원", cat: "a11y", img: "55.png", url: "https://fei.suhyup.co.kr/fei/index.do", client: "수협중앙회", company: "케이투웹테크", role: "웹접근성 인증", cont: 100 },
+    { name: "나사렛대학교", cat: "a11y", img: "53.png", url: "https://www.kornu.ac.kr/mbs/kornukr/index.jsp", client: "나사렛대학교", company: "케이투웹테크", role: "UI/UX 퍼블리싱·반응형·웹접근성 인증마크 갱신", cont: 100 },
 
     /* --- 팀 프로젝트 (메인 담당) --- */
-    { name: "강원도교육청 리뉴얼", cat: "team", img: "70.png", url: "https://www.gwe.go.kr/mbshome/mbs/kr/index.do" },
-    { name: "명지대학교 (템플릿)", cat: "team", img: "68.png", url: "https://chem.mju.ac.kr/chem/index.do" },
-    { name: "나사렛대학교 (템플릿)", cat: "team", img: "61.png", url: "https://cms.kornu.ac.kr/emt/index.do" },
-    { name: "협성대학교 (템플릿)", cat: "team", img: "60.png", url: "https://www.uhs.ac.kr/sites/gra/index.do" },
+    // { name: "강원도교육청 리뉴얼", cat: "team", img: "70.png", url: "https://www.gwe.go.kr/mbshome/mbs/kr/index.do", client: "강원도교육청", company: "케이투웹테크", role: "UI/UX 퍼블리싱·반응형 (메인 담당)", cont: 100 },
+    { name: "명지대학교 (템플릿)", cat: "team", img: "68.png", url: "https://chem.mju.ac.kr/chem/index.do", client: "명지대학교", company: "케이투웹테크", role: "학과(부) 템플릿 퍼블리싱·반응형", cont: 100 },
+    { name: "나사렛대학교 (템플릿)", cat: "team", img: "61.png", url: "https://cms.kornu.ac.kr/emt/index.do", client: "나사렛대학교", company: "케이투웹테크", role: "통합 템플릿 퍼블리싱·반응형", cont: 100 },
+    { name: "협성대학교 (템플릿)", cat: "team", img: "60.png", url: "https://www.uhs.ac.kr/sites/gra/index.do", client: "협성대학교", company: "케이투웹테크", role: "통합 템플릿 퍼블리싱·반응형", cont: 100 },
 
     /* --- 내부망 --- */
-    { name: "농협 기업형 템플릿", cat: "intra", img: "69.jpg", url: "" },
-    { name: "육군사관학교 산학협력단", cat: "intra", img: "67.png", url: "https://research.kma.ac.kr:462/sites/research/index.do" },
-    { name: "육군사관학교 화랑대연구소", cat: "intra", img: "66.jpg", url: "" },
-    { name: "안보지원사령부", cat: "intra", img: "65.jpg", url: "" },
-    { name: "스마트국방혁신", cat: "intra", img: "64.jpg", url: "" },
-    { name: "군인원지키미", cat: "intra", img: "63.png", url: "https://hrkeeper.mnd.go.kr/mbshome/mbs/mhriis/" },
-    { name: "국방헬프콜", cat: "intra", img: "62.jpg", url: "https://medcmd.mil.kr/mbshome/mbs/helpcall2/" },
-    { name: "국방통합데이터센터", cat: "intra", img: "59.jpg", url: "" },
-    { name: "국방부 가습기살균제 군피해지원센터", cat: "intra", img: "58.jpg", url: "" },
-    { name: "과학화전투훈련단", cat: "intra", img: "57.png", url: "https://www.kctc.mil.kr:452/" },
-    { name: "대한민국 공군", cat: "intra", img: "56.jpg", url: "" },
-    { name: "육군학생군사학교", cat: "intra", img: "51.jpg", url: "" },
-    { name: "지상군페스티벌", cat: "intra", img: "50.jpg", url: "" },
-    { name: "국방안보대화", cat: "intra", img: "43.jpg", url: "" },
-    { name: "양성평등", cat: "intra", img: "44.jpg", url: "" },
-    { name: "국군인쇄창", cat: "intra", img: "47.jpg", url: "" },
-    { name: "조사본부", cat: "intra", img: "48.jpg", url: "" },
-    { name: "군사지형정보", cat: "intra", img: "49.jpg", url: "" },
+    { name: "농협 기업형 템플릿", cat: "intra", img: "69.jpg", url: "", client: "농협정보시스템", company: "케이투웹테크", role: "UI/UX 퍼블리싱·반응형", cont: 100 },
+    { name: "육군사관학교 산학협력단", cat: "intra", img: "67.png", url: "https://research.kma.ac.kr:462/sites/research/index.do", client: "육군사관학교", company: "케이투웹테크", role: "UI/UX 퍼블리싱·반응형", cont: 100 },
+    { name: "육군사관학교 화랑대연구소", cat: "intra", img: "66.jpg", url: "", client: "육군사관학교", company: "케이투웹테크", role: "UI/UX 퍼블리싱·반응형", cont: 100 },
+    { name: "안보지원사령부", cat: "intra", img: "65.jpg", url: "", client: "국군안보지원사령부", company: "케이투웹테크", role: "UI/UX 퍼블리싱", cont: 100 },
+    { name: "스마트국방혁신", cat: "intra", img: "64.jpg", url: "", client: "국방부", company: "케이투웹테크", role: "UI/UX 퍼블리싱·반응형", cont: 100 },
+    { name: "군인원지키미", cat: "intra", img: "63.png", url: "https://hrkeeper.mnd.go.kr/mbshome/mbs/mhriis/", client: "국방부", company: "케이투웹테크", role: "UI/UX 퍼블리싱", cont: 100 },
+    { name: "국방헬프콜", cat: "intra", img: "62.jpg", url: "https://medcmd.mil.kr/mbshome/mbs/helpcall2/", client: "국방부", company: "케이투웹테크", role: "UI/UX 퍼블리싱", cont: 100 },
+    { name: "국방통합데이터센터", cat: "intra", img: "59.jpg", url: "", client: "국방전산정보원", company: "케이투웹테크", role: "UI/UX 퍼블리싱", cont: 100 },
+    { name: "국방부 가습기살균제 군피해지원센터", cat: "intra", img: "58.jpg", url: "", client: "국방부", company: "케이투웹테크", role: "UI/UX 퍼블리싱", cont: 100 },
+    { name: "과학화전투훈련단", cat: "intra", img: "57.png", url: "https://www.kctc.mil.kr:452/", client: "육군", company: "케이투웹테크", role: "UI/UX 퍼블리싱", cont: 100 },
+    { name: "대한민국 공군", cat: "intra", img: "56.jpg", url: "", client: "공군본부", company: "케이투웹테크", role: "UI/UX 퍼블리싱", cont: 100 },
+    { name: "육군학생군사학교", cat: "intra", img: "51.jpg", url: "", client: "육군", company: "케이투웹테크", role: "UI/UX 퍼블리싱", cont: 100 },
+    { name: "지상군페스티벌", cat: "intra", img: "50.jpg", url: "", client: "육군", company: "케이투웹테크", role: "UI/UX 퍼블리싱", cont: 100 },
+    { name: "국방안보대화", cat: "intra", img: "43.jpg", url: "", client: "국방부", company: "케이투웹테크", role: "UI/UX 퍼블리싱", cont: 100 },
+    { name: "양성평등", cat: "intra", img: "44.jpg", url: "", client: "국방부", company: "케이투웹테크", role: "UI/UX 퍼블리싱", cont: 100 },
+    { name: "국군인쇄창", cat: "intra", img: "47.jpg", url: "", client: "국방부", company: "케이투웹테크", role: "UI/UX 퍼블리싱", cont: 100 },
+    { name: "조사본부", cat: "intra", img: "48.jpg", url: "", client: "국방부조사본부", company: "케이투웹테크", role: "UI/UX 퍼블리싱", cont: 100 },
+    { name: "군사지형정보", cat: "intra", img: "49.jpg", url: "", client: "육군", company: "케이투웹테크", role: "UI/UX 퍼블리싱", cont: 100 },
 
-    /* --- 개인 작업 (100%) --- */
-    { name: "듀얼아이", cat: "solo", img: "39.png", url: "http://www.duali.com/" },
-    { name: "용추골미궁순대", cat: "solo", img: "40.png", url: "https://www.soondea.com/kr/" },
+    /* --- 개인 작업 (전담) --- */
+    { name: "듀얼아이", cat: "solo", img: "39.png", url: "http://www.duali.com/", client: "듀얼아이", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
+    { name: "용추골미궁순대", cat: "solo", img: "40.png", url: "https://www.soondea.com/kr/", client: "용추골미궁순대", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
     // { name: "지유가오카", cat: "solo", img: "16.png", url: "http://jiyugaoka.co.kr/kr/index.php" },
-    { name: "큰손컴퍼니", cat: "solo", img: "42.png", url: "http://www.kscompany.co.kr/kr/index.php" },
-    { name: "제니스앤컴퍼니", cat: "solo", img: "01.png", url: "http://www.zenithn.com/" },
-    { name: "아이닉스", cat: "solo", img: "02.png", url: "http://www.eyenix.com/" },
+    { name: "큰손컴퍼니", cat: "solo", img: "42.png", url: "http://www.kscompany.co.kr/kr/index.php", client: "큰손컴퍼니", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
+    { name: "제니스앤컴퍼니", cat: "solo", img: "01.png", url: "http://www.zenithn.com/", client: "제니스앤컴퍼니", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
+    { name: "아이닉스", cat: "solo", img: "02.png", url: "http://www.eyenix.com/", client: "아이닉스", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
     // { name: "에스앤티씰링시스템", cat: "solo", img: "03.png", url: "http://www.sntsealing.com/" },
     // { name: "이천영어마을", cat: "solo", img: "04.png", url: "http://gpv.unesco.or.kr" },
-    { name: "파란텍", cat: "solo", img: "11.png", url: "https://parantek.com/en/index.php" },
-    { name: "운세코리아", cat: "solo", img: "06.png", url: "http://unsek.net/kr/index.php" },
-    { name: "나우베스트", cat: "solo", img: "13.png", url: "http://www.nowbest.com/kr/index.php" },
+    { name: "파란텍", cat: "solo", img: "11.png", url: "https://parantek.com/en/index.php", client: "파란텍", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
+    { name: "운세코리아", cat: "solo", img: "06.png", url: "http://unsek.net/kr/index.php", client: "운세코리아", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
+    { name: "나우베스트", cat: "solo", img: "13.png", url: "http://www.nowbest.com/kr/index.php", client: "나우베스트", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
     // { name: "스펠릭스", cat: "solo", img: "34.png", url: "https://spelix.com/kr/index.php" },
-    { name: "세인트폴 서울", cat: "solo", img: "35.png", url: "http://www.stpaulseoul.org/en/" },
-    { name: "KDX2019", cat: "solo", img: "28.png", url: "http://www.kdxkorea.co.kr/kr/index.php" },
+    { name: "세인트폴 서울", cat: "solo", img: "35.png", url: "http://www.stpaulseoul.org/en/", client: "세인트폴 서울", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
+    { name: "KDX2019", cat: "solo", img: "28.png", url: "http://www.kdxkorea.co.kr/kr/index.php", client: "KDX2019", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
     // { name: "3장인", cat: "solo", img: "38.png", url: "http://3jangin.com/kr/index.php" },
     // { name: "나노워셔", cat: "solo", img: "14.png", url: "http://www.nanowasher.com" },
     // { name: "에코필리아", cat: "solo", img: "20.png", url: "http://www.ecophilia.co.kr/kr/index.php" },
-    { name: "그루스터디센터", cat: "solo", img: "19.png", url: "http://groostudy.co.kr/" },
-    { name: "한국종이접기협회", cat: "solo", img: "12.png", url: "http://www.origami.or.kr/kr/index.php" },
+    { name: "그루스터디센터", cat: "solo", img: "19.png", url: "http://groostudy.co.kr/", client: "그루스터디센터", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
+    { name: "한국종이접기협회", cat: "solo", img: "12.png", url: "http://www.origami.or.kr/kr/index.php", client: "한국종이접기협회", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 0 },
     // { name: "MH인베스트먼트", cat: "solo", img: "07.png", url: "http://topsstock.co.kr/" },
     // { name: "한송정", cat: "solo", img: "05.png", url: "http://xn--o80b27iutf.kr/kr/index.php" },
-    { name: "아신아이", cat: "solo", img: "08.png", url: "http://www.selftrust.co.kr/kr/index.php" },
+    { name: "아신아이", cat: "solo", img: "08.png", url: "http://www.selftrust.co.kr/kr/index.php", client: "아신아이", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
     // { name: "정광피에스아이", cat: "solo", img: "09.png", url: "http://www.promade21.co.kr" },
-    { name: "심리센터 다감", cat: "solo", img: "10.png", url: "http://www.dagam.co/kr/index.php" },
+    { name: "심리센터 다감", cat: "solo", img: "10.png", url: "http://www.dagam.co/kr/index.php", client: "심리센터 다감", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
     // { name: "지능정보산업협회", cat: "solo", img: "15.png", url: "http://www.k-ai.or.kr" },
     // { name: "인스쿨연기학원", cat: "solo", img: "17.png", url: "http://www.inschool.kr" },
-    { name: "지와이텐트", cat: "solo", img: "18.png", url: "http://www.gytent.co.kr/kr/index.php" },
-    { name: "대신입찰연구소", cat: "solo", img: "21.png", url: "https://dsbid.net/kr/index.php" },
-    { name: "더플랜", cat: "solo", img: "22.png", url: "http://dreamtheplan.com" },
+    { name: "지와이텐트", cat: "solo", img: "18.png", url: "http://www.gytent.co.kr/kr/index.php", client: "지와이텐트", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
+    { name: "대신입찰연구소", cat: "solo", img: "21.png", url: "https://dsbid.net/kr/index.php", client: "대신입찰연구소", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
+    { name: "더플랜", cat: "solo", img: "22.png", url: "http://dreamtheplan.com", client: "더플랜", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
     // { name: "셀리버리", cat: "solo", img: "24.png", url: "http://www.celliveryreagent.com/kr/index.php" },
-    { name: "오팔인터내셔널", cat: "solo", img: "25.png", url: "http://www.garmentopal.com/en/index.php" },
+    { name: "오팔인터내셔널", cat: "solo", img: "25.png", url: "http://www.garmentopal.com/en/index.php", client: "오팔인터내셔널", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
     // { name: "거제둔덕시골", cat: "solo", img: "26.png", url: "http://gddsigol.co.kr/kr/index.php" },
-    { name: "비씨티", cat: "solo", img: "27.png", url: "http://www.ibct.co.kr/kr/index.php" },
+    { name: "비씨티", cat: "solo", img: "27.png", url: "http://www.ibct.co.kr/kr/index.php", client: "비씨티", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
     // { name: "한국기업산업협회", cat: "solo", img: "29.png", url: "http://www.keisa.co.kr/kr/" },
     // { name: "로이스멤버십", cat: "solo", img: "30.png", url: "https://member.e-royce.co.kr/kr/index.php" },
-    { name: "마인드매니지", cat: "solo", img: "31.png", url: "http://www.mindmanage.co.kr/kr/index.php" },
+    { name: "마인드매니지", cat: "solo", img: "31.png", url: "http://www.mindmanage.co.kr/kr/index.php", client: "마인드매니지", company: "(주)거인소프트", role: "웹 퍼블리싱 전담", cont: 100 },
     // { name: "세인티엔엘", cat: "solo", img: "32.png", url: "http://www.seinlogistics.com/kr/index.php" },
     // { name: "두센", cat: "solo", img: "33.png", url: "http://www.shmodular.com/kr/" },
     // { name: "탄천물재생센터", cat: "solo", img: "36.png", url: "http://www.tancheon.com/kr/index.php" },
@@ -134,6 +136,19 @@
         '<span class="work-name">' +
         w.name +
         "</span>" +
+        (w.client ? '<span class="work-meta"><span class="work-meta-label">발주처</span>' + w.client + "</span>" : "") +
+        (w.role ? '<span class="work-meta"><span class="work-meta-label">역할</span>' + w.role + "</span>" : "") +
+        (w.company ? '<span class="work-meta"><span class="work-meta-label">소속</span>' + w.company + "</span>" : "") +
+        (typeof w.cont === "number"
+          ? '<span class="work-cont">' +
+            '<span class="work-cont-top"><span class="work-cont-label">기여도</span><span class="work-cont-val">' +
+            w.cont +
+            "%</span></span>" +
+            '<span class="work-cont-bar"><span class="work-cont-fill" style="width:' +
+            w.cont +
+            '%"></span></span>' +
+            "</span>"
+          : "") +
         "</span>" +
         (hasLink ? '<span class="work-arrow" aria-hidden="true">↗</span>' : "") +
         "</" +

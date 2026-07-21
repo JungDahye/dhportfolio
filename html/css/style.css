@@ -613,7 +613,7 @@ body {
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 .work-card {
@@ -688,8 +688,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 22px;
-  background: linear-gradient(180deg, rgba(27, 30, 75, 0) 30%, rgba(27, 30, 75, 0.55) 62%, rgba(27, 30, 75, 0.92) 100%);
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(27, 30, 75, 0.15) 0%, rgba(27, 30, 75, 0.72) 45%, rgba(27, 30, 75, 0.95) 100%);
   opacity: 0;
   transform: translateY(10px);
   transition:
@@ -712,6 +712,67 @@ body {
   font-weight: 700;
   color: #fff;
   line-height: 1.35;
+  margin-bottom: 8px;
+}
+.work-meta {
+  display: block;
+  font-size: 14px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.82);
+  margin-top: 3px;
+}
+.work-meta-label {
+  display: inline-block;
+  min-width: 40px;
+  margin-right: 6px;
+  font-weight: 700;
+  color: var(--violet-400);
+}
+.work-cont {
+  display: block;
+  margin-top: 14px;
+  width: 100%;
+}
+.work-cont-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.work-cont-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #fff;
+}
+.work-cont-val {
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+}
+.work-cont-bar {
+  display: block;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.22);
+  overflow: hidden;
+}
+.work-cont-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--violet-400), #fff);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.55);
+  transform-origin: left center;
+  animation: workContFill 0.9s var(--ease) both;
+}
+@keyframes workContFill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 .work-arrow {
   position: absolute;
